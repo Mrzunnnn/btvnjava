@@ -21,7 +21,8 @@ public class Main {
                 break;
             }
             else{
-                System.out.println("không hợp lệ");}
+                System.out.println("không hợp lệ");
+                break;}
         }
         System.out.println("Nhập thể loại cần tìm : ");
         String theLoai = scanner.nextLine();
@@ -31,7 +32,9 @@ public class Main {
                 break;
             }
             else{
-                System.out.println("không hợp lệ");}
+                System.out.println("không hợp lệ");
+                break;
+                }
         }
         for (int i = 0;i<books.size();i++ ){
             if (books.get(i).getYear()==2023){
