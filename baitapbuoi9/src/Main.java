@@ -29,25 +29,19 @@ public class Main {
                 System.out.println("Sản phẩm có số lượng dưới 5 là : " + products.get(q).getName());
             }
         }
-        System.out.println("Nhập id sản phẩm muốn xóa");
-        int removeId = Integer.parseInt(sc.nextLine());
-        System.out.println("Nhập số lượng sản phẩm muốn xóa");
-        int removeQuantity=sc.nextInt();
-        for (int i = 0; i < products.size(); i++) {
-            if (removeId == products.get(i).getId()) {
-                while (true) {
-                    if (removeQuantity>0&&removeQuantity<=products.get(i).getQuantity()) {
-                        System.out.println("Số lượng sản phẩm còn lại là: "+(products.get(i).getQuantity()-removeQuantity));
-                        break;
-                    }else {
-                        System.out.println("Lỗi! Mời nhập lại");
-                        int removeQuantity1= sc.nextInt();
-                        if (removeQuantity1>0&&removeQuantity1<=products.get(i).getQuantity()) {
-                            System.out.println("Số lượng sản phẩm còn lại là: "+(products.get(i).getQuantity()-removeQuantity1));
-                            break;
-                        }
-                    }
-                }
+        System.out.println("Nhập id bạn muốn tìm");
+        int productId = sc.nextInt();
+        for (int i = 0;i<products.size();i++){
+            if (productId==products.get(i).getId()){
+                System.out.println("Sản phẩm bạn cần tìm là : "+products.get(i).getName());
+            }
+        }
+        System.out.println("Nhập id bạn muốn xoá : ");
+        int removeId = sc.nextInt();
+        for (int i = 0;i<products.size();i++){
+            if (removeId==products.get(i).getId()){
+                products.remove(products.get(i));
+                System.out.println("Số lượng sản phầm còn lại là : "+products);
             }
         }
         for (int p = 0;p<products.size();p++){

@@ -24,8 +24,6 @@ public class Main {
         for (int i = 0; i < serials.size() || i < serials.size(); i++) {
             if (movies.get(i).getTieuDe().equalsIgnoreCase(timPhim))
                 System.out.println(movies.get(i));
-            if (serials.get(i).getTieuDe().equalsIgnoreCase(timPhim))
-                System.out.println(serials.get(i));
         }
     }
 

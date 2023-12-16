@@ -54,7 +54,7 @@ public class Product {
     }
     @Override
     public String toString() {
-        return "Product: (" +
+        return "Product:"+
                 "id: " + id +
                 ", Tên sản phẩm  : " + name +
                 ", Mô tả :  " + description +
